@@ -26,6 +26,22 @@ body {
     color: #4caf50;
 }
 
+/* Sico's Note: Naki-click yung logo para bumalik sa Home page */
+#clickable-logo {
+    text-decoration: none; 
+    user-select: none; 
+}
+
+#clickable-logo:visited {
+    color: inherit; 
+}
+
+#clickable-logo:hover {
+    cursor: pointer; 
+}
+
+
+
 .sidebar nav ul {
     list-style: none;
     padding: 0;
