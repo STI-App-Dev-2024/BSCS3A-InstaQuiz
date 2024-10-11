@@ -28,6 +28,21 @@ nav {
     color: #4CAF50; 
 }
 
+
+/* Sico's Note: Naki-click yung logo para bumalik sa Home page */
+#clickable-logo {
+    text-decoration: none; 
+    user-select: none; 
+}
+
+#clickable-logo:visited {
+    color: inherit; 
+}
+
+#clickable-logo:hover {
+    cursor: pointer; 
+}
+
 .nav-links {
     list-style: none;
     display: flex;
