@@ -27,19 +27,33 @@ onAuthStateChanged(auth, async (user) => {
         const userDoc = await getDoc(userDocRef);
 
         if (userDoc.exists()) {
-            const userName = userDoc.data().name;  
-            
+            const userData = userDoc.data();  
+            const firstName = userData.firstName;
+            const capitalizFirstLetter = capitalizeFirstLetter(firstName);
             // Display the user's name on the homepage
-            document.querySelector('.user-name').textContent = `Hello, ${userName}!`;
-            document.querySelector('.content h2').textContent = `Welcome to InstaQuiz, ${userName}!`;
+            document.querySelector('.user-name').textContent = `Hello, ${capitalizFirstLetter}!`;
+            document.querySelector('.content h2').textContent = `Welcome to InstaQuiz, ${capitalizFirstLetter}!`;
         } else {
             console.error("No such document in Firestore!");
         }
     } else {
-        // Redirect to login if no user is signed in
+      
         window.location.href = 'signin.html';
     }
 });
+
+//capitalize the first letter of first name
+function capitalizeFirstLetter(string){
+    if (!string) return ' ';
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+
+
+
+
+
+
 
 // Logout function
 document.querySelector('.logout').addEventListener('click', function(event) {
