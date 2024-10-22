@@ -1,4 +1,4 @@
-// welcome navigation
+// welcome Navigation
 document.addEventListener("DOMContentLoaded", function () {
 
     // goes to welcome page by clicking the logo
@@ -26,60 +26,82 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Home navigation
-document.addEventListener("DOMContentLoaded", function () {
-
-    // goes to quizzes-tab
-    document.getElementById("quizzes-tab").addEventListener("click", function (event) {
-        event.preventDefault();
-        window.location.href = "../html/sidebars/sd_quizzes.html";
-    });
-
-    // goes to folders-tab
-    document.getElementById("folders-tab").addEventListener("click", function (event) {
-        event.preventDefault();
-        window.location.href = "../html/sidebars/sd_folders.html";
-    });
-
-    // goes to progress-tab
-    document.getElementById("progress-tab").addEventListener("click", function (event) {
-        event.preventDefault();
-        window.location.href = "../html/sidebars/sd_progress.html";
-    });
-
-    // goes to scores-tab
-    document.getElementById("scores-tab").addEventListener("click", function (event) {
-        event.preventDefault();
-        window.location.href = "../html/sidebars/sd_scores.html";
-    });
-});
-
-// Quizzes navigation
+// Homepage Navigation
 document.addEventListener("DOMContentLoaded", function () {
 
     // goes to home-tab
     document.getElementById("home-tab").addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = "../homepage.html";
+        window.location.href = "homepage.html";
     });
 
-    // goes to folders-tab
-    document.getElementById("folders-tab").addEventListener("click", function (event) {
+    // goes to quizzes-tab
+    document.getElementById("quizzes-tab").addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = "../sidebars/sd_folders.html";
+        window.location.href = "sidebars/sd_quizzes.html";
     });
 
-    // goes to progress-tab
-    document.getElementById("progress-tab").addEventListener("click", function (event) {
+    // goes to inbox-tab
+    document.getElementById("inbox-tab").addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = "../sidebars/sd_progress.html";
+        window.location.href = "sidebars/sd_inbox.html";
     });
 
     // goes to scores-tab
     document.getElementById("scores-tab").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "sidebars/sd_scores.html";
+    });
+
+    // goes to analyze-tab
+    document.getElementById("analyze-tab").addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = "../sidebars/sd_scores.html";
+        window.location.href = "sidebars/sd_analyze.html";
+    });
+
+    // goes to ranking-tab
+    document.getElementById("ranking-tab").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "sidebars/sd_ranking.html";
     });
 });
 
+// Sidebars Navigation
+document.addEventListener("DOMContentLoaded", function () {
 
+    // goes to home-tab
+    document.getElementById("sd-home-tab").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "../homepage.html";
+    });
+
+    // goes to quizzes-tab
+    document.getElementById("sd-quizzes-tab").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "sd_quizzes.html";
+    });
+
+    // goes to inbox-tab
+    document.getElementById("sd-inbox-tab").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "sd_inbox.html";
+    });
+
+    // goes to scores-tab
+    document.getElementById("sd-scores-tab").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "sd_scores.html";
+    });
+
+    // goes to analyze-tab
+    document.getElementById("sd-analyze-tab").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "sd_analyze.html";
+    });
+
+    // goes to ranking-tab
+    document.getElementById("sd-ranking-tab").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "sd_ranking.html";
+    });
+});
