@@ -46,12 +46,13 @@
             <h1>Manage Quiz</h1>
             <div class="layer1">
                 <h2>Root</h2>
-                <h2 class="new-folder">New Folder</h2>
+                <h2 class="new-folder"> <img src="/InstaQuiz/images/newfolder.png" alt="newfolder icon" id="newfolderIcon" style="width: 30px; height: 25px;"> </h2>
+                <h2 >New Folder</h2>
             </div>
 
             <button id="openModalBtn">Create Quiz</button>
 
-            <!-- The Modal -->
+            <!-- The Create Quiz Modal -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     
@@ -71,12 +72,13 @@
                         <div id="create-quiz" class="tab-content active">
                             <div class="upload-area">
                                 <div class="upload-box" id="uploadBox">
+                                    <p1> <img src="/InstaQuiz/images/pdftoquiz.png" alt="PDFtoQUIZ icon" id="pdftoquizIcon" style="width: 80px; height: 30px;"> </p1>
                                     <p>Click or drag and drop to upload</p>
-                                    <p>PDF size limit: -MB</p>
+                                    <p2>PDF size limit: -MB</p2>
                                     <input type="file" id="fileInput" style="display:none;">
                                 </div>
                                 <div id="fileDetails" style="display:none;">
-                                    <img src="/InstaQuiz/InstaQuiz/images/pdf-icon.png" alt="PDF icon" id="pdfIcon" style="width: 24px; height: 24px;">
+                                    <img src="/InstaQuiz/images/pdf-icon.png" alt="PDF icon" id="pdfIcon" style="width: 24px; height: 24px;">
                                     <span id="fileName"></span>
                                 </div>
                                 <button class="convert-btn">Convert now!</button>
@@ -87,7 +89,7 @@
                         </div>
                     </div>
                         </div>
-                    </div>
+            </div>
         </div>
     </div>
 </body>
