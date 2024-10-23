@@ -49,9 +49,10 @@ body {
     color: #4caf50;
 }
 
+/* InstaQuiz Logo */
 .logo {
     padding: 20px;
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
     color: #333;
 }
@@ -77,15 +78,16 @@ body {
 
 .main-content {
     margin-left: 200px;
-    padding: 20px;
+    padding: 0px;
 }
 
 header {
     display: flex;
     justify-content: space-between;  
     align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+    background-color: #fff;
 }
 
 .menu-btn {
