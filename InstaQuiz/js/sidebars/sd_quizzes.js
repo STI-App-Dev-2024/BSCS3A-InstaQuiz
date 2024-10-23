@@ -94,11 +94,6 @@ btn.onclick = function() {
 modal.style.display = "flex";
 }
 
-// Close the modal when the close button is clicked
-closeBtn.onclick = function() {
-modal.style.display = "none";
-}
-
 // Close the modal when clicking anywhere outside of the modal content
 window.onclick = function(event) {
 if (event.target == modal) {

@@ -180,6 +180,9 @@ h2 {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
+    flex: 1; /* Allow tabs-content to grow and fill space */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
 }
 
 .tab-content {
@@ -190,23 +193,78 @@ h2 {
     display: block;
 }
 
-.upload-area {
+
+/* Modal container, hidden by default */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Added to enable centering */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal container, hidden by default */
+.modal {
+    display: none; /* Change to block when needed */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 80%; 
+    max-height: 80%;
     text-align: center;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+
+/* Upload area */
+.upload-area {
+    flex: 1; /* Allow upload area to grow and fill space */
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: space-between;
+    padding: 10px;/
 }
 
 .upload-area p {
     font-size: 16px;
     color: #333;
-    height: 200px;
 }
 
+/* upload box */
 .upload-box {
     border: 2px dashed #ccc;
-    width: auto;
-    height: auto;
     background-color: #fafafa;
     color: #888;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%;
 }
 
 .convert-btn {
@@ -218,9 +276,6 @@ h2 {
     cursor: pointer;
 }
 
-.convert-btn:hover {
-    background-color: #45a049;
-}
 
 .profile-drawer {
     display: none;  
