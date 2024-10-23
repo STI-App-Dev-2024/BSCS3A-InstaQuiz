@@ -119,19 +119,36 @@ header {
 }
 
 .content {
-    margin-top: 30px;
-    margin-left: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
+/* layer1 will fill all space available horizontally*/
+.layer1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.new-folder {
+    margin-left: auto; /* This pushes "New Folder" to the right */
+}
+
+/* Manage Quiz */
 h1 {
+    font-size: 35px;
+    color: #333;
+}
+
+/* Root, New folder */
+h2 {
     font-size: 16px;
     color: #333;
 }
 
-h2 {
-    font-size: 28px;
-    color: #333;
-}
+
 .tabs-nav {
     display: flex;
     border-bottom: 2px solid #4caf50;
@@ -171,6 +188,38 @@ h2 {
 
 .tab-content.active {
     display: block;
+}
+
+.upload-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.upload-area p {
+    font-size: 16px;
+    color: #333;
+    height: 200px;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    width: auto;
+    height: auto;
+    background-color: #fafafa;
+    color: #888;
+}
+
+.convert-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.convert-btn:hover {
+    background-color: #45a049;
 }
 
 .profile-drawer {

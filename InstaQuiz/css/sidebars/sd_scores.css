@@ -118,6 +118,19 @@ header {
     color: #4caf50;
 }
 
+.content {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+/* Scores */
+h1 {
+    font-size: 35px;
+    color: #333;
+}
+
 .tabs-nav {
     display: flex;
     border-bottom: 2px solid #4caf50;

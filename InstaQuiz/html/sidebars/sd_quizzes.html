@@ -9,6 +9,41 @@
     <script type="module" src="../../js/profile_drawer.js"></script>
     <script type="module" src="../../js/navigation.js"></script>
 
+    <style>
+        /* Modal container, hidden by default */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal content */
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 50%;
+            height: 75%;
+            text-align: center;
+        }
+
+        /* Close button inside the modal */
+        .close-btn {
+            color: red;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
     <div class="sidebar">
@@ -28,7 +63,6 @@
     </div>
 
     <div class="main-content">
-
         <header>
             <button class="menu-btn">&#9776;</button>
 
@@ -41,18 +75,55 @@
                     <a href="#" class="logout">Logout</a>
                 </div>
             </div>
-
         </header>
-        <div class="content">
-            <div style="display: inline-block;">
-                <h2>Manage Quiz</h2>
-                <h1>Root</h1>
-            </div>
-            <div style="display: inline-block; margin-left: 1300px;">
-                <h1>New Folder</h1>
-            </div>
-        </div>
 
+        <div class="content">
+            <h1>Manage Quiz</h1>
+            <div class="layer1">
+                <h2>Root</h2>
+                <h2 class="new-folder">New Folder</h2>
+            </div>
+
+            <button id="openModalBtn">Create Quiz</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <p>Convert PDF to Quiz</p>
+                    <p1>Click the box or drag your file into it to convert your PDF into an interactive quiz!</p1>
+
+                    <!-- Tabs Navigation -->
+                    <nav class="tabs-nav">
+                        <ul>
+                            <li class="tab active" data-tab="create-quiz">Create Quiz</li>
+                            <li class="tab" data-tab="answered-quiz">Answered Quiz</li>
+                        </ul>
+                    </nav>
+        
+                    <!-- Tabs Content -->
+                    <div class="tabs-content">
+                        <div id="create-quiz" class="tab-content active">
+                            <div class="upload-area">
+                                <div class="upload-box" id="uploadBox">
+                                    <p>Click or drag and drop to upload</p>
+                                    <p>PDF size limit: -MB</p>
+                                    <input type="file" id="fileInput" style="display:none;">
+                                </div>
+                                <div id="fileDetails" style="display:none;">
+                                    <img src="/InstaQuiz/InstaQuiz/images/pdf-icon.png" alt="PDF icon" id="pdfIcon" style="width: 24px; height: 24px;">
+                                    <span id="fileName"></span>
+                                </div>
+                                <button class="convert-btn">Convert now!</button>
+                            </div>
+                        </div>
+                        <div id="answered-quiz" class="tab-content">
+                            <p>Content for Answered Quiz tab will go here.</p>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+        </div>
     </div>
 </body>
 </html>

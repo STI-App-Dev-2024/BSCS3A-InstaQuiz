@@ -120,12 +120,14 @@ header {
 }
 
 .content {
-    margin-top: 30px;
-    margin-left: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
-h2 {
-    font-size: 28px;
+h1 {
+    font-size: 35px;
     color: #333;
 }
 .tabs-nav {
@@ -167,36 +169,6 @@ h2 {
 
 .tab-content.active {
     display: block;
-}
-
-.upload-area {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.upload-area p {
-    font-size: 16px;
-    color: #333;
-}
-
-.upload-box {
-    border: 2px dashed #ccc;
-    padding: 50px;
-    margin: 20px 0;
-    background-color: #fafafa;
-    color: #888;
-}
-
-.convert-btn {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.convert-btn:hover {
-    background-color: #45a049;
 }
 
 .profile-drawer {
